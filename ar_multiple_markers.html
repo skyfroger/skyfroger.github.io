@@ -4,17 +4,18 @@
     <meta charset="UTF-8">
     <title>AR Multiple Markers</title>
     <script src="https://aframe.io/releases/0.6.1/aframe.min.js"></script>
-    <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.5.0/aframe/build/aframe-ar.js"> </script>
+    <!-- <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.5.0/aframe/build/aframe-ar.js"> </script> -->
+    <script src="ar-wcp.js"></script>
     <script>THREEx.ArToolkitContext.baseURL = 'https://rawgit.com/jeromeetienne/ar.js/master/three.js/'</script>
 </head>
     
 <body style='margin : 0px; overflow: hidden;'>
 	<a-scene embedded arjs='sourceType: webcam; debugUIEnabled: false;'>
-        <a-marker preset='custom' url='pattern-01.patt' >
+        <a-marker preset='custom' type='pattern' url='pattern-01.patt' >
                 <a-box></a-box>
         </a-marker>
 
-        <a-marker preset='custom' url='pattern-02.patt'>
+        <a-marker preset='custom' type='pattern' url='pattern-02.patt'>
                 <a-entity 
 
                         obj-model="obj: url(clippy.obj); mtl: url(clippy.mtl)">
