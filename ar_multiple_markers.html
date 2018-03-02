@@ -10,12 +10,12 @@
 </head>
     
 <body style='margin : 0px; overflow: hidden;'>
-	<a-scene embedded arjs='detectionMode: mono_and_matrix; matrixCodeType: 3x3; sourceType: webcam; debugUIEnabled: false;'>
-        <a-marker type='barcode' value='1' >
+	<a-scene embedded arjs='sourceType: webcam; debugUIEnabled: false;'>
+        <a-marker preset='custom' url='pattern-01.patt' >
                 <a-box></a-box>
         </a-marker>
 
-        <a-marker type='barcode' value='2'>
+        <a-marker preset='custom' url='pattern-02.patt'>
                 <a-entity 
 
                         obj-model="obj: url(clippy.obj); mtl: url(clippy.mtl)">
