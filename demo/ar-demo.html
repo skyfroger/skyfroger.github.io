@@ -20,6 +20,16 @@
                 <a-entity mixin="size" obj-model="obj: #trex-obj; mtl: #trex-mtl"></a-entity>
                 <!-- <a-entity scale="4 4 4" obj-model="obj: url(trex/T-Rex.obj); mtl: url(trex/T-Rex.mtl)"></a-entity> -->
             </a-marker>
+
+            <a-marker preset='custom' type='pattern' url='pattern-02.patt' >
+                <a-box color="tomato" depth="2" height="2" width="2">
+                    <a-animation attribute="rotation"
+                                dur="3000"
+                                to="0 360 0"
+                                repeat="indefinite"
+                                easing="linear"></a-animation>
+                </a-box>
+            </a-marker>
             <a-entity camera></a-entity>
         </a-scene>
     </body>
