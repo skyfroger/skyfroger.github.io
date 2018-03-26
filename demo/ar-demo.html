@@ -12,14 +12,12 @@
     </head>
     <body style='margin : 0px; overflow: hidden;'>
         <a-scene embedded arjs='sourceType: webcam; debugUIEnabled: false;'>
-            <a-assets timeout="10000">
-                <!-- <a-asset-item id="trex-obj" src="trex/T-Rex.obj"></a-asset-item>
-                <a-asset-item id="trex-mtl" src="trex/T-Rex.mtl"></a-asset-item>
-                <a-mixin id="size" scale="2 2 2"></a-mixin> -->
+            <a-assets timeout="15000">
+                <a-mixin id="size" scale="0.5 0.5 0.5"></a-mixin>
+                <a-asset-item id="robot" src="robot/scene.gltf"></a-asset-item>
             </a-assets>
             <a-marker preset='custom' type='pattern' url='pattern-01.patt' >
-                <!-- <a-entity mixin="size" obj-model="obj: #trex-obj; mtl: #trex-mtl"></a-entity> -->
-                <a-entity scale="0.5 0.5 0.5" gltf-model="url(robot/scene.gltf)" animation-mixer></a-entity>
+                <a-entity mixin="size" gltf-model="#robot" animation-mixer></a-entity>
             </a-marker>
 
             <a-marker preset='custom' type='pattern' url='pattern-02.patt' >
@@ -34,5 +32,11 @@
 
             <a-entity camera></a-entity>
         </a-scene>
+
+    <script>
+        document.querySelector('a-assets').addEventListener('loaded', function(){
+            alert("Model loaded!");
+        });
+    </script>
     </body>
 </html>
