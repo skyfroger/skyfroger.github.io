@@ -15,19 +15,27 @@
             <a-assets timeout="15000">
                 <a-mixin id="size" scale="0.5 0.5 0.5"></a-mixin>
                 <a-asset-item id="robot" src="robot/scene.gltf"></a-asset-item>
+                <a-asset-item id="t-rex-obj" src="trex/T-Rex.obj"></a-asset-item>
+                <a-asset-item id="t-rex-mtl" src="trex/T-Rex.mtl"></a-asset-item>
             </a-assets>
             <a-marker preset='custom' type='pattern' url='pattern-01.patt' >
                 <a-entity mixin="size" gltf-model="#robot" animation-mixer></a-entity>
             </a-marker>
 
             <a-marker preset='custom' type='pattern' url='pattern-02.patt' >
-                <a-box color="tomato" depth="2" height="2" width="2">
+                <a-sphere src="earth_atmos_4096.jpg" radius="1" position="0 2 0">
                     <a-animation attribute="rotation"
-                                dur="3000"
+                                dur="10000"
                                 to="0 360 0"
                                 repeat="indefinite"
                                 easing="linear"></a-animation>
-                </a-box>
+                </a-sphere>
+            </a-marker>
+
+            <a-marker preset='custom' type='pattern' url='pattern-03.patt'>
+                <a-entity mixin="size" obj-model="obj: #t-rex-obj; mtl: #t-rex-mtl"></a-entity>
+            </a-marker>
+
             </a-marker>
 
             <a-entity camera></a-entity>
