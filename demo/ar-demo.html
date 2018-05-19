@@ -17,6 +17,9 @@
                 <a-asset-item id="robot" src="robot/scene.gltf"></a-asset-item>
                 <a-asset-item id="t-rex-obj" src="trex/T-Rex.obj"></a-asset-item>
                 <a-asset-item id="t-rex-mtl" src="trex/T-Rex.mtl"></a-asset-item>
+
+                <a-asset-item id="model-obj" src="model/model.obj"></a-asset-item>
+                <a-asset-item id="model-mtl" src="model/model.mtl"></a-asset-item>
             </a-assets>
             <a-marker preset='custom' type='pattern' url='pattern-03.patt' >
                 <a-entity mixin="size" gltf-model="#robot" animation-mixer></a-entity>
@@ -33,7 +36,7 @@
             </a-marker>
 
             <a-marker preset='custom' type='pattern' url='pattern-01.patt'>
-                <a-entity obj-model="obj: #t-rex-obj; mtl: #t-rex-mtl"></a-entity>
+                <a-entity obj-model="obj: #model-obj; mtl: #model-mtl"></a-entity>
             </a-marker>
 
             </a-marker>
