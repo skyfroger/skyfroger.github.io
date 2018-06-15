@@ -5,15 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="dist/styles.css">
-    <script src="dist/main.js" defer></script>
-    <link rel="icon" type="image/png" href="assets/images/icon/favicon-32x32.png" sizes="32x32" />
     <style>
-        .main__canvas {
-            background-image: url('assets/images/background.gif');
+        .konvajs-content {
+            background-image: url('assets/background.jpg');
+            background-repeat: no-repeat;
             background-size: cover;
-            background-position: bottom;
+            width: 1280px;
         }
     </style>
+    <script src="dist/main.js" defer></script>
+    <link rel="icon" type="image/png" href="assets/images/icon/favicon-32x32.png" sizes="32x32" />
     <title>Study Go</title>
 </head>
 <body>
@@ -36,8 +37,8 @@
                     </p>
                     <p>Перед началом игры введи имя своего персонажа и оружие которым он пользуется. После этого ты начнёшь своё
                         первое сражение. Нажми на кнопку Выбор заклинания и выбери, что ты хочешь сделать дальше.
-                        Атака нанесёт монстру 10 единиц урона если ты ответишь правильно на предложенный вопрос.
-                        Если ответишь неправильно, монстр атакует и нанесёт 10 единиц урона тебе. Не паникуй.
+                        Атака нанесёт монстру 20 единиц урона если ты ответишь правильно на предложенный вопрос.
+                        Если ответишь неправильно, монстр атакует и нанесёт 20 единиц урона тебе. Не паникуй.
                         Ты можешь восстановить потерянное здоровье, если выберешь заклинание лечения и правильно ответишь на вопрос.
                     </p>
                     <p>
@@ -113,8 +114,11 @@
             <div class="modal fade" id="main__defeat-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog" role="document">
                 <div class="modal-content">
-                    <div class="modal-body">
+                    <div class="modal-body text-center">
                         <p><span id="defeat__winner"></span> одолел вашего героя. Начните игру заново.</p>
+                        <p>
+                            <img src="assets/buttons/shield.png">
+                        </p>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-primary" data-dismiss="modal">Новая игра</button>
@@ -158,7 +162,7 @@
                         <div class="row">
                             <div class="col text-center">
                                 <h4>Атака</h4>
-                                <p>Нанесёт 10 единиц урона противнику.</p>
+                                <p>Нанесёт 20 единиц урона противнику.</p>
                                 <button type="button" class="btn btn-outline-light" data-toggle="modal" id="main__damage-spell-button" data-target="#main__math-task" data-backdrop="static" data-keyboard="false">
                                     <img src="assets/buttons/sword.png">
                                 </button>
