@@ -15,7 +15,7 @@
     </style>
     <script src="dist/main.js" defer></script>
     <link rel="icon" type="image/png" href="assets/images/icon/favicon-32x32.png" sizes="32x32" />
-    <title>Study Go</title>
+    <title>Mind Games: Quest for Knowledge</title>
 </head>
 <body>
     <div class="container-fluid">
@@ -24,7 +24,7 @@
             <div class="row">
                 <div class="col-md-1"></div>
                 <div class="col-md-10">
-                    <h1>Study Go</h1>
+                    <h1>Mind Games: Quest for Knowledge</h1>
                 </div>
                 <div class="col-md-1"></div>
             </div>
@@ -224,6 +224,26 @@
                 </div>
             </div>
             <!-- End of translate task modal -->
+
+            <!-- Geo Task Modal -->
+            <div class="modal fade" id="main__geo-task" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Перевод</h5>
+                    </div>
+                    <div class="modal-body text-center">
+                        <p>Напиши какой город является столицей данной страны.</p>
+                        <h4 id="geo__country"></h4>
+                        <input type="text" id="geo__answer" class="form-control" placeholder="Ответ">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">Отправить ответ</button>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <!-- End of geo task modal -->
 
             <!-- Audition Task Modal -->
             <div class="modal fade" id="main__audition-task" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
