@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif&subset=cyrillic');
+
+/* Style reset */
+html, body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-size: 10px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.site-header {
+    min-height: 500px;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/index/header-background.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.main-content {
+    margin: 0 200px;
+}
+
+.site-sections {
+    display: flex;
+    justify-content: center;
+}
+
+.site-footer {
+    background-color: gray;
+    min-height: 100px;
+}
+
+.header-text {
+    font-family: 'Noto Serif', serif;
+    font-size: 5rem;
+    color: white;
+    margin: 0;
+    padding: 0 20px;
+}
+
+@media(max-width: 900px) {
+    .main-content {
+        margin: 0 10px;
+    }
+}
